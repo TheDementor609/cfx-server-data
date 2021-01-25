@@ -104,8 +104,6 @@ const webpackBuildTask = {
                         await sleep(3000);
                     }
 
-                    console.log(`${resourceName}: started building ${configName}`);
-
                     buildingInProgress = true;
                     currentBuildingModule = resourceName;
 
@@ -142,7 +140,7 @@ const webpackBuildTask = {
                             }
 
                             console.log(`${resourceName}: built ${configName}`);
-                            buildingInProgress = false;
+
                             resolve();
                         });
                     }));
